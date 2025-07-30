@@ -1,1 +1,3 @@
-# PokeLens
+# Pokemon Card Recognition
+
+A simple, free project to identify Pokemon cards using your phone's camera. The focus is on basic recognition and card information display. The app allows users to take a photo or upload an image of a Pokemon card, identifies the card by name using OCR, and displays basic card details such as name, HP, type, and attacks. Users can also add cards to a simple collection list.
