@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Poke-Lens - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="home.html" class="nav-title">Poke-Lens</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Overview</a>
+        <a href="lens.html" class="nav-link">Lens</a>
+        <a href="collection.html" class="nav-link">Collection</a>
+        <a href="trends.html" class="nav-link">Trends</a>
+      </div>
+      <div class="nav-auth">
+        <button class="login-btn">Log In</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-landing">
+    <!-- Background gradient -->
+    <div class="hero-bg"></div>
+    
+    <!-- Main hero content -->
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="title-line">Discover, Track,</span>
+          <span class="title-line highlight">Collect</span>
+        </h1>
+        <p class="hero-subtitle">Your ultimate Pokemon card companion</p>
+        <p class="hero-tagline">Keeping track of your collection fast and easy.</p>
+        <div class="hero-cta">
+          <a href="index.html" class="cta-btn primary">Get Started</a>
+          <a href="lens.html" class="cta-btn secondary">Try Lens</a>
+        </div>
+      </div>
+      
+      <!-- Card Carousel -->
+      <div class="card-carousel-container">
+        <div class="card-carousel">
+          <div class="card-slide">
+            <div class="pokemon-card">
+              <div class="card-image">
+                <img src="images/zapdos_tcg.jpg" alt="Zapdos Pokemon Card">
+              </div>
+              <div class="card-glow"></div>
+            </div>
+          </div>
+          <div class="card-slide">
+            <div class="pokemon-card">
+              <div class="card-image">
+                <img src="images/moonbreon_tcg.jpg" alt="Moonbreon Pokemon Card">
+              </div>
+              <div class="card-glow"></div>
+            </div>
+          </div>
+          <div class="card-slide">
+            <div class="pokemon-card">
+              <div class="card-image">
+                <img src="images/lugia_tcg.jpg" alt="Lugia Pokemon Card">
+              </div>
+              <div class="card-glow"></div>
+            </div>
+          </div>
+          <div class="card-slide">
+            <div class="pokemon-card">
+              <div class="card-image">
+                <img src="images/giratina_tcg.jpg" alt="Giratina Pokemon Card">
+              </div>
+              <div class="card-glow"></div>
+            </div>
+          </div>
+          <div class="card-slide">
+            <div class="pokemon-card">
+              <div class="card-image">
+                <img src="images/zapdos_tcg.jpg" alt="Zapdos Pokemon Card">
+              </div>
+              <div class="card-glow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating particles -->
+    <div class="floating-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </div>
+
+  <!-- Features section -->
+  <div class="features-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Poke-Lens?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>Smart Recognition</h3>
+          <p>Instantly identify Pokemon cards with our advanced AI technology</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Market Analytics</h3>
+          <p>Track prices and market trends to make informed decisions</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Collection Management</h3>
+          <p>Organize and manage your entire Pokemon card collection</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Auto-scroll carousel
+    const carousel = document.querySelector('.card-carousel');
+    let scrollPosition = 0;
+    
+    function scrollCarousel() {
+      scrollPosition += 1;
+      if (scrollPosition >= carousel.scrollWidth / 2) {
+        scrollPosition = 0;
+      }
+      carousel.scrollLeft = scrollPosition;
+    }
+    
+    setInterval(scrollCarousel, 50);
+    
+    // Add entrance animations
+    document.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.hero-title, .hero-subtitle, .hero-tagline, .hero-cta, .card-carousel-container');
+      
+      elements.forEach((element, index) => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        
+        setTimeout(() => {
+          element.style.transition = 'all 0.8s ease';
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }, index * 200);
+      });
+    });
+  </script>
+
+</body>
+</html> 
